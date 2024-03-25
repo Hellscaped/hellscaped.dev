@@ -3,7 +3,7 @@ import './App.css'
 import { Button, Image } from 'antd'
 
 function App() {
-  const [pepeOpacity, setPepeOpacity] = useState(1)
+  const [pepeOpacity, setPepeOpacity] = useState(0)
 
   return (
     <>
