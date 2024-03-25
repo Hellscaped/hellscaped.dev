@@ -1,33 +1,32 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { Button, Image } from 'antd'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [pepeOpacity, setPepeOpacity] = useState(1)
 
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
       </div>
-      <h1>Vite + React</h1>
+      <div className='block'>
+      <h1>Hey, I'm Hellscaped.</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <div alt="Hellscaped" className='pfp'/>
+        <p>Just a casual programmer.</p>
+        <p>I know Python 3 (7+ Years), Web Trio (HTML, CSS, JS), and Java.</p>
+        <p>Currently learning Rust.</p>
+
+        <Button type="primary" href="https://github.com/Hellscaped">
+          <i className="fab fa-github"></i> GitHub
+        </Button>
+          
+        <Button type="primary" onClick={() => {setPepeOpacity(pepeOpacity+1)}}>
+          hehe clicky clicky
+        </Button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      </div>
+      <img src="/pepe.png" alt="pepe" id='pepe' style={{ opacity: `${pepeOpacity}%` }} />
     </>
   )
 }

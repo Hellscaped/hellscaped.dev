@@ -3,40 +3,55 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+  --primary-color: #F20C39;
+  --secondary-color: #40d140;
 }
 
 .card {
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
+.block {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  padding: 1.5em;
+  border: 1px solid var(--primary-color);
+}
+
+.pfp {
+  width: 7.5em;
+  height: 7.5em;
+  margin: 1em;
+  display: inline-block;
+  background-image: url('/pfp.png');
+  background-size: cover;
+  background-position: center;
+  position:relative;
+  border-radius: 50%;
+  animation: rotate 2s ease;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.pfp:hover {
+  animation: rotate 2s ease infinite;
+}
+
+/* make pepe cover the screen */
+#pepe {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
